@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Country" representedClassName="Country" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="languages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Language" inverseName="country" inverseEntity="Language"/>
+    </entity>
+    <entity name="Language" representedClassName="Language" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="languages" inverseEntity="Country"/>
+    </entity>
+    <elements>
+        <element name="Country" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="Language" positionX="173.36328125" positionY="-16.453125" width="128" height="73"/>
+    </elements>
+</model>
